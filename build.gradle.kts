@@ -3,7 +3,7 @@ import java.util.Base64
 import org.openapitools.generator.gradle.plugin.tasks.GenerateTask
 
 plugins {
-    id("org.openapi.generator") version "5.3.0"
+    id("org.openapi.generator") version "5.4.0"
     idea
 }
 
