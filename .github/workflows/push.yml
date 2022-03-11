@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ruby/setup-ruby
+      - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
       - run: bundle install
@@ -20,10 +20,10 @@ jobs:
       matrix:
         os: [ubuntu, macos]
         ruby: [2.4, 2.5, 2.6, 2.7, 3.0, 3.1, head]
-    continue-on-error: ${{ endsWith(matrix.ruby, 'head') || matrix.ruby == 'debug' }}
+    continue-on-error: ${{ endsWith(matrix.ruby, 'head') }}
     steps:
       - uses: actions/checkout@v2
-      - uses: ruby/setup-ruby
+      - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
