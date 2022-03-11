@@ -1,0 +1,36 @@
+name: Ruby CI
+
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+      - run: bundle install
+      - name: Rubocop
+        run: bundle exec rubocop
+  test:
+    runs-on: ${{ matrix.os }}-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu, macos]
+        ruby: [2.4, 2.5, 2.6, 2.7, 3.0, 3.1, head]
+    continue-on-error: ${{ endsWith(matrix.ruby, 'head') || matrix.ruby == 'debug' }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+      - run: bundle install
+      - run: bundle exec rake
+        env:
+          CLOUDREACTOR_API_HOST: ${{ secrets.CLOUDREACTOR_API_HOST }}
+          CLOUDREACTOR_API_KEY:  ${{ secrets.CLOUDREACTOR_API_KEY }}
+          CLOUDREACTOR_SAMPLE_TASK_NAME:  ${{ secrets.CLOUDREACTOR_SAMPLE_TASK_NAME }}

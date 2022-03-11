@@ -266,7 +266,5 @@ module CloudReactorAPIClient
         value
       end
     end
-
   end
-
 end

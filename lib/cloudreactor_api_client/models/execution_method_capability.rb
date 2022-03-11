@@ -51,5 +51,4 @@ module CloudReactorAPIClient
       end
     end
   end
-
 end

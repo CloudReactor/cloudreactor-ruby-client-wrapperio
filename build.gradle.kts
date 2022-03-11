@@ -40,25 +40,31 @@ tasks.register<Delete>("clearLib") {
 }
 
 // Copy generated libs
-tasks.register<Copy>("copyLib") {
+tasks.register<Copy>("build") {
     this.from(File("build/generate-resources/main")) {
         include("lib/**")
         include("spec/**")
         include("Rakefile")
         include("docs/**")
-        include("Gemfile")
+        // Need to update version of Rubocop
+        // include("Gemfile")
         include("*.gemspec")
-        include("*.rubocop.yml")
+        // Need to exclude build directory from analysis
+        //include("*.rubocop.yml")
 
     }
     this.destinationDir = File(".")
     this.dependsOn(tasks.named("clearLib"))
+    this.dependsOn(tasks.named("openApiGenerate"))
     this.finalizedBy(tasks.named("copyWrapperLib"))
 }
 
 tasks.register<Copy>("copyWrapperLib") {
     this.from(File("wrapper_lib"))
     this.destinationDir = File("lib")
-    //this.finalizedBy(tasks.named("copyJavaDocCNAME"))
+    this.finalizedBy(tasks.named("correct"))
 }
 
+tasks.register<Exec>("correct") {
+  this.commandLine(listOf("bundle", "exec", "rubocop", "-a"))
+}

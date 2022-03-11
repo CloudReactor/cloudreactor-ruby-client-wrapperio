@@ -95,8 +95,8 @@ module CloudReactorWrapperIO
 
     private
 
-    def socket
-      @socket || UDPSocket.new
-    end
+      def socket
+        @socket || UDPSocket.new
+      end
   end
 end

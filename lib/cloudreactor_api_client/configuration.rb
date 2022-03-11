@@ -273,6 +273,5 @@ module CloudReactorAPIClient
 
       url
     end
-
   end
 end
