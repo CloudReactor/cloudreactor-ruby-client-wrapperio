@@ -1,4 +1,6 @@
-import java.util.Base64
+import java.nio.file.Paths
+import java.nio.file.Files
+import java.io.FileWriter
 
 import org.openapitools.generator.gradle.plugin.tasks.GenerateTask
 
@@ -41,7 +43,7 @@ tasks.register<Delete>("clearLib") {
 }
 
 // Copy generated libs
-tasks.register<Copy>("build") {
+tasks.register<Copy>("copyLib") {
     this.from(File("build/generate-resources/main")) {
         include("lib/**")
         include("spec/**")
@@ -57,7 +59,26 @@ tasks.register<Copy>("build") {
     this.destinationDir = File(".")
     this.dependsOn(tasks.named("clearLib"))
     this.dependsOn(tasks.named("openApiGenerate"))
+}
+
+tasks.register("build") {
+    this.dependsOn(tasks.named("copyLib"))
+    this.finalizedBy(tasks.named("patchLib"))
     this.finalizedBy(tasks.named("copyWrapperLib"))
+}
+
+tasks.register("patchLib") {
+    doLast {
+        val inputPath = Paths.get("lib_patch/configuration_patch.rb")
+        val outputFileWriter = FileWriter("lib/cloudreactor_api_client.rb",
+            true // append
+        )
+
+        outputFileWriter.write("\n# Patches below\n")
+        outputFileWriter.write(Files.readString(inputPath))
+        outputFileWriter.close()
+    }
+    this.dependsOn(tasks.named("copyLib"))
 }
 
 tasks.register<Copy>("copyWrapperLib") {
@@ -67,5 +88,5 @@ tasks.register<Copy>("copyWrapperLib") {
 }
 
 tasks.register<Exec>("correct") {
-  this.commandLine(listOf("bundle", "exec", "rubocop", "-a"))
+    this.commandLine(listOf("bundle", "exec", "rubocop", "-a"))
 }

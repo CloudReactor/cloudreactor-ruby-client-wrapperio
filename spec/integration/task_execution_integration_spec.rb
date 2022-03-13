@@ -14,7 +14,6 @@ describe 'Task Execution Integration' do
     c.server_index = nil
 
     c.host = ENV['CLOUDREACTOR_API_HOST']
-    c.api_key_prefix['tokenAuth'] = 'Token'
     c.api_key['tokenAuth'] = ENV['CLOUDREACTOR_API_KEY']
 
     c
