@@ -48,6 +48,7 @@ tasks.register<Copy>("copyLib") {
         include("lib/**")
         include("spec/**")
         include("Rakefile")
+        include("README.md")
         include("docs/**")
         // Need to update version of Rubocop
         // include("Gemfile")
@@ -55,6 +56,7 @@ tasks.register<Copy>("copyLib") {
         // Need to exclude build directory from analysis
         //include("*.rubocop.yml")
 
+        rename("README\\.md", "CloudReactor API Client.md")
     }
     this.destinationDir = File(".")
     this.dependsOn(tasks.named("clearLib"))
