@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
   s.summary     = "CloudReactor API client and process wrapper communication"
   s.description = "API client to monitor and manage Tasks and Workflows in CloudReactor, and communication with a CloudReactor process wrapper"
   s.license     = "BSD-2-Clause"
-  s.required_ruby_version = ">= 2.4"
+  s.required_ruby_version = ">= 2.5"
 
   s.add_runtime_dependency 'typhoeus', '~> 1.0', '>= 1.0.1'
 

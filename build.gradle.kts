@@ -27,6 +27,7 @@ tasks.named<GenerateTask>("openApiGenerate") {
         "gemAuthorEmail" to "jeff@cloudreactor.io",
         "gemDescription" to "API client to monitor and manage Tasks and Workflows in CloudReactor, and communication with a CloudReactor process wrapper",
         "gemHomepage" to "https://cloudreactor.io",
+        "gemRequiredRubyVersion" to ">= 2.5",
         "gemName" to "cloudreactor_api_client",
         "gemLicense" to "BSD-2-Clause",
         "gemSummary" to "CloudReactor API client and process wrapper communication",
