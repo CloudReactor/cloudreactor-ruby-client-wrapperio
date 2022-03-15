@@ -4,7 +4,7 @@ module CloudReactorWrapperIO
   class StatusUpdater
     DEFAULT_STATUS_UPDATE_PORT = 2373
 
-    def initialize(logger: nil)
+    def initialize(enabled: nil, logger: nil)
       @logger = logger
 
       unless @logger
@@ -17,7 +17,13 @@ module CloudReactorWrapperIO
 
       @socket = nil
       @port = nil
-      @enabled = (ENV['PROC_WRAPPER_ENABLE_STATUS_UPDATE_LISTENER'] || 'FALSE').upcase == 'TRUE'
+
+      if enabled.nil?
+        @enabled = (ENV['PROC_WRAPPER_ENABLE_STATUS_UPDATE_LISTENER'] ||
+          'FALSE').upcase == 'TRUE'
+      else
+        @enabled = enabled
+      end
 
       if @enabled
         @logger.info('ProcessStatusUpdater is enabled')
@@ -26,7 +32,8 @@ module CloudReactorWrapperIO
         return
       end
 
-      @port = (ENV['PROC_WRAPPER_STATUS_UPDATE_SOCKET_PORT'] || DEFAULT_STATUS_UPDATE_PORT).to_i
+      @port = (ENV['PROC_WRAPPER_STATUS_UPDATE_SOCKET_PORT'] ||
+        DEFAULT_STATUS_UPDATE_PORT).to_i
 
       at_exit do
         @logger.info('Shutting down status update socket ...')
