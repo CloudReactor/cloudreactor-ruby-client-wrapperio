@@ -11,7 +11,7 @@ This Ruby gem consists of 2 parts:
    create, monitor, and manage Tasks and Workflows. Most notably you can start and stop
    Tasks and Workflows by creating Task Executions and Workflow Executions.
 
-2) The Wrapper I/O modules allows ruby processes to communicate with the
+2) The Wrapper I/O module allows ruby applications to communicate with the
    [CloudReactor wrapper](https://github.com/CloudReactor/cloudreactor-procwrapper)
    which is the parent process.
 
@@ -70,8 +70,8 @@ picked up correctly.
 # PROC_WRAPPER_STATUS_UPDATE_SOCKET_BIND_PORT
 # to determine configuration. These environment variables are typically passed
 # to the proc_wrapper module which then passes them on to your process.
-
 status_updater = new CloudReactorWrapperIO::StatusUpdater()
+
 begin 
   status_updater.send_update(
     success_count: 1,
