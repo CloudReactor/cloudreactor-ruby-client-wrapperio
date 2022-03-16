@@ -1,4 +1,3 @@
-
 require 'dotenv'
 require 'spec_helper'
 
@@ -46,6 +45,7 @@ describe 'Task Execution Integration' do
     expect(subject).is_a?(CloudReactorAPIClient::TaskExecution)
     expect(subject.uuid).not_to be_nil
     expect(subject.task.name).to eq(task.name)
-    expect(subject.status).to eq(CloudReactorAPIClient::TaskExecutionStatus::MANUALLY_STARTED)
+    expect(subject.status).to eq(
+      CloudReactorAPIClient::TaskExecutionStatus::MANUALLY_STARTED)
   end
 end

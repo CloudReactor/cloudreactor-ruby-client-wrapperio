@@ -1,14 +1,18 @@
 require 'logger'
+require 'socket'
 
 module CloudReactorWrapperIO
   class StatusUpdater
     DEFAULT_STATUS_UPDATE_PORT = 2373
 
-    def initialize(enabled: nil, logger: nil)
+    attr_reader :enabled
+    attr_reader :port
+
+    def initialize(enabled: nil, port: nil, logger: nil)
       @logger = logger
 
       unless @logger
-        if const_defined?(:Rails)
+        if defined?(Rails)
           @logger = Rails.logger
         else
           @logger = Logger.new(STDOUT)
@@ -32,8 +36,12 @@ module CloudReactorWrapperIO
         return
       end
 
-      @port = (ENV['PROC_WRAPPER_STATUS_UPDATE_SOCKET_PORT'] ||
-        DEFAULT_STATUS_UPDATE_PORT).to_i
+      if port.nil?
+        @port = (ENV['PROC_WRAPPER_STATUS_UPDATE_SOCKET_PORT'] ||
+          DEFAULT_STATUS_UPDATE_PORT).to_i
+      else
+        @port = port
+      end
 
       at_exit do
         @logger.info('Shutting down status update socket ...')
@@ -81,6 +89,10 @@ module CloudReactorWrapperIO
 
       if extra_props
         status_hash.merge!(extra_props)
+      end
+
+      if status_hash.empty?
+        return
       end
 
       message = status_hash.to_json + "\n"
