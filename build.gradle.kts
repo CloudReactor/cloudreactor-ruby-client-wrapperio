@@ -56,7 +56,7 @@ tasks.register<Copy>("copyLib") {
         // Need to exclude build directory from analysis
         //include("*.rubocop.yml")
 
-        rename("README\\.md", "CloudReactor API Client.md")
+        rename("README\\.md", "cloudreactor_api_client.md")
     }
     this.destinationDir = File(".")
     this.dependsOn(tasks.named("clearLib"))
