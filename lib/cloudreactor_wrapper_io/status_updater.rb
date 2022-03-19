@@ -1,3 +1,4 @@
+require 'json'
 require 'logger'
 require 'socket'
 
@@ -62,7 +63,7 @@ module CloudReactorWrapperIO
     def send_update(success_count: nil, error_count: nil, skipped_count: nil,
       expected_count: nil, last_status_message: nil, extra_props: nil)
       unless @enabled
-        return
+        return false
       end
 
       status_hash = {}
@@ -92,16 +93,18 @@ module CloudReactorWrapperIO
       end
 
       if status_hash.empty?
-        return
+        return false
       end
 
       message = status_hash.to_json + "\n"
 
       begin
         socket.send(message, 0, '127.0.0.1', @port)
+        true
       rescue => ex
         @logger.debug("Can't send status update, resetting socket")
         @socket = nil
+        false
       end
     end
 
