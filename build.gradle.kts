@@ -52,7 +52,10 @@ tasks.register<Copy>("copyLib") {
         include("docs/**")
         // Need to update version of Rubocop
         // include("Gemfile")
-        include("*.gemspec")
+
+        // Want to filter the files
+        // include("*.gemspec")
+
         // Need to exclude build directory from analysis
         //include("*.rubocop.yml")
 
