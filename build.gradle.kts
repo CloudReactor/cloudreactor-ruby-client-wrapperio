@@ -74,7 +74,7 @@ tasks.register("build") {
 
 tasks.register("patchLib") {
     doLast {
-        val inputPath = Paths.get("lib_patch/configuration_patch.rb")
+        val inputPath = file("./lib_patch/configuration_patch.rb").toPath()
         val outputFileWriter = FileWriter("lib/cloudreactor_api_client.rb",
             true // append
         )
