@@ -31,7 +31,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'rspec', '~> 3.6', '>= 3.6.0'
 
-  s.files         = Dir["{lib}/**/*.rb", "LICENSE.txt", "*.md"]
+  s.files = Dir["{lib}/**/*.rb", "LICENSE.txt", "*.md"]
   s.test_files    = `find spec/*`.split("\n")
   s.executables   = []
   s.require_paths = ["lib"]

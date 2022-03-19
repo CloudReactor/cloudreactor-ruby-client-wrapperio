@@ -38,7 +38,7 @@ tasks.named<GenerateTask>("openApiGenerate") {
 }
 
 tasks.register<Delete>("clearLib") {
-    this.delete("lib")
+    delete("lib")
 }
 
 // Copy generated libs
@@ -49,11 +49,6 @@ tasks.register<Copy>("copyLib") {
         include("Rakefile")
         include("README.md")
         include("docs/**")
-        // Need to update version of Rubocop
-        // include("Gemfile")
-
-        // Want to filter the files
-        // include("*.gemspec")
 
         // Need to exclude build directory from analysis
         //include("*.rubocop.yml")
@@ -69,6 +64,8 @@ tasks.register("build") {
     dependsOn(tasks.named("copyLib"))
     finalizedBy(tasks.named("patchLib"))
     finalizedBy(tasks.named("copyWrapperLib"))
+    finalizedBy(tasks.named("patchGemfile"))
+    finalizedBy(tasks.named("patchGemspec"))
 }
 
 tasks.register("patchLib") {
@@ -85,13 +82,45 @@ tasks.register("patchLib") {
     dependsOn(tasks.named("copyLib"))
 }
 
+tasks.register<Copy>("patchGemspec") {
+    from(File("build/generate-resources/main")) {
+        include("*.gemspec")
+    }
+    destinationDir = File(".")
+    filter {
+       if (it.contains("s.files")) {
+           "  s.files = Dir[\"{lib}/**/*.rb\", \"LICENSE.txt\", \"*.md\"]"
+       } else {
+           it
+       }
+    }
+    filteringCharset = "UTF-8"
+    dependsOn(tasks.named("openApiGenerate"))
+}
+
+tasks.register<Copy>("patchGemfile") {
+    from(File("build/generate-resources/main/Gemfile"))
+    destinationDir = File(".")
+    filter {
+        if (it.contains("gem 'rubocop'")) {
+            """
+  gem 'dotenv', '~> 2'
+  gem 'rubocop', '~> 1'
+  gem 'rubocop-rspec', require: false
+  gem 'rubocop-rake', require: false  
+            """
+        } else {
+            it
+        }
+    }
+    filteringCharset = "UTF-8"
+    dependsOn(tasks.named("openApiGenerate"))
+}
+
 tasks.register<Copy>("copyWrapperLib") {
     from(File("wrapper_lib"))
     destinationDir = File("lib")
     finalizedBy(tasks.named("correct"))
-
-
-
 }
 
 tasks.register<Exec>("correct") {
