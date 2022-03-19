@@ -1,4 +1,3 @@
-import java.nio.file.Paths
 import java.nio.file.Files
 import java.io.FileWriter
 
@@ -44,7 +43,7 @@ tasks.register<Delete>("clearLib") {
 
 // Copy generated libs
 tasks.register<Copy>("copyLib") {
-    this.from(File("build/generate-resources/main")) {
+    from(File("build/generate-resources/main")) {
         include("lib/**")
         include("spec/**")
         include("Rakefile")
@@ -61,15 +60,15 @@ tasks.register<Copy>("copyLib") {
 
         rename("README\\.md", "cloudreactor_api_client.md")
     }
-    this.destinationDir = File(".")
-    this.dependsOn(tasks.named("clearLib"))
-    this.dependsOn(tasks.named("openApiGenerate"))
+    destinationDir = File(".")
+    dependsOn(tasks.named("clearLib"))
+    dependsOn(tasks.named("openApiGenerate"))
 }
 
 tasks.register("build") {
-    this.dependsOn(tasks.named("copyLib"))
-    this.finalizedBy(tasks.named("patchLib"))
-    this.finalizedBy(tasks.named("copyWrapperLib"))
+    dependsOn(tasks.named("copyLib"))
+    finalizedBy(tasks.named("patchLib"))
+    finalizedBy(tasks.named("copyWrapperLib"))
 }
 
 tasks.register("patchLib") {
@@ -83,15 +82,18 @@ tasks.register("patchLib") {
         outputFileWriter.write(Files.readString(inputPath))
         outputFileWriter.close()
     }
-    this.dependsOn(tasks.named("copyLib"))
+    dependsOn(tasks.named("copyLib"))
 }
 
 tasks.register<Copy>("copyWrapperLib") {
-    this.from(File("wrapper_lib"))
-    this.destinationDir = File("lib")
-    this.finalizedBy(tasks.named("correct"))
+    from(File("wrapper_lib"))
+    destinationDir = File("lib")
+    finalizedBy(tasks.named("correct"))
+
+
+
 }
 
 tasks.register<Exec>("correct") {
-    this.commandLine(listOf("bundle", "exec", "rubocop", "-a"))
+    commandLine(listOf("bundle", "exec", "rubocop", "-a"))
 }
