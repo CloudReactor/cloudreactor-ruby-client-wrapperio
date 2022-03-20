@@ -1,4 +1,4 @@
-# cloudreactor-ruby-client-wrapperio
+# CloudReactor Ruby API client and Wrapper I/O
 
 ![Gem](https://img.shields.io/gem/v/cloudreactor_api_client)
 ![Ruby CI](https://github.com/CloudReactor/cloudreactor-ruby-client-wrapperio/workflows/Ruby%20CI/badge.svg?branch=master)
@@ -10,17 +10,16 @@
 This Ruby gem consists of 2 parts:
 
 1) The CloudReactor API client allows ruby applications to programmatically
-   create, monitor, and manage Tasks and Workflows. Most notably, you can start
-   and stop Tasks and Workflows by creating Task Executions and
-   Workflow Executions.
+   create, monitor, and manage Tasks and Workflows in CloudReactor. Most
+   notably, you can start and stop Tasks and Workflows by creating Task
+   Executions and Workflow Executions.
 
 2) The Wrapper I/O module allows ruby applications to communicate with the
-   [CloudReactor wrapper](https://github.com/CloudReactor/cloudreactor-procwrapper)
-   which is the parent process.
+   [CloudReactor process wrapper](https://github.com/CloudReactor/cloudreactor-procwrapper) which is the parent process.
 
 To install this gem, include:
 
-  gem 'cloudreactor_api_client'
+    gem 'cloudreactor_api_client'
 
 in your `Gemfile`.
 
