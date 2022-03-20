@@ -1,7 +1,9 @@
 # cloudreactor-ruby-client-wrapperio
 
+![Gem](https://img.shields.io/gem/v/cloudreactor_api_client)
 ![Ruby CI](https://github.com/CloudReactor/cloudreactor-ruby-client-wrapperio/workflows/Ruby%20CI/badge.svg?branch=master)
 ![GitHub](https://img.shields.io/github/license/CloudReactor/cloudreactor-ruby-client-wrapperio)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/CloudReactor/cloudreactor-ruby-client-wrapperio)
 
 ## Overview
 
@@ -64,13 +66,17 @@ picked up correctly.
 ### Example usage
 
 ```ruby
+# This is necessary even in Rails, due to the module name not matching the
+# package name.
+require 'cloudreactor_wrapper_io'
+
 # Use the environment variables
 # PROC_WRAPPER_ENABLE_STATUS_UPDATE_LISTENER
 # PROC_WRAPPER_STATUS_UPDATE_SOCKET_PORT
 # PROC_WRAPPER_STATUS_UPDATE_SOCKET_BIND_PORT
 # to determine configuration. These environment variables are typically passed
 # to the proc_wrapper module which then passes them on to your process.
-status_updater = new CloudReactorWrapperIO::StatusUpdater()
+status_updater = CloudReactorWrapperIO::StatusUpdater.new()
 
 begin
   status_updater.send_update(

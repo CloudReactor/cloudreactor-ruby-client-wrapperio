@@ -11,5 +11,5 @@ OpenAPI Generator version: 5.4.0
 =end
 
 module CloudReactorAPIClient
-  VERSION = '0.1.1'
+  VERSION = '0.1.2'
 end
