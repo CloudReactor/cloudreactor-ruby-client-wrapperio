@@ -3,6 +3,7 @@
 *.iml
 *.ipr
 *.iws
+.vscode/
 
 .gradle/
 gradle.properties
