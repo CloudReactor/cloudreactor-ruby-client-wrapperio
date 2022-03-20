@@ -99,7 +99,7 @@ module CloudReactorWrapperIO
     # @param expected_count [Integer, nil] The number of expected items
     # @param last_status_message [String, nil] A status message
     # @param [Hash, nil] extra_props Additional properties to send
-    # @return [Boolean] True if the update was sent, false othewise
+    # @return [Boolean] True if the update was sent, false otherwise
     def send_update(success_count: nil, error_count: nil, skipped_count: nil,
       expected_count: nil, last_status_message: nil, extra_props: nil)
       unless @enabled
