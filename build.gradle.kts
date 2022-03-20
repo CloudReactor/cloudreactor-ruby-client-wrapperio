@@ -11,7 +11,7 @@ plugins {
 val GROUP = "io.cloudreactor"
 val ARTIFACT = "tasksymphony"
 val PACKAGE = GROUP + "." + ARTIFACT
-val VERSION = "0.1.0.pre"
+val VERSION = "0.1.1.pre"
 
 group = PACKAGE
 version = VERSION
@@ -27,7 +27,7 @@ tasks.named<GenerateTask>("openApiGenerate") {
         "gemAuthor" to "Jeff Tsay",
         "gemAuthorEmail" to "jeff@cloudreactor.io",
         "gemDescription" to "API client to monitor and manage Tasks and Workflows in CloudReactor, and communication with a CloudReactor process wrapper",
-        "gemHomepage" to "https://cloudreactor.io",
+        "gemHomepage" to "https://github.com/CloudReactor/cloudreactor-ruby-client-wrapperio",
         "gemRequiredRubyVersion" to ">= 2.5",
         "gemName" to "cloudreactor_api_client",
         "gemLicense" to "BSD-2-Clause",

@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Jeff Tsay"]
   s.email       = ["jeff@cloudreactor.io"]
-  s.homepage    = "https://cloudreactor.io"
+  s.homepage    = "https://github.com/CloudReactor/cloudreactor-ruby-client-wrapperio"
   s.summary     = "CloudReactor API client and process wrapper communication"
   s.description = "API client to monitor and manage Tasks and Workflows in CloudReactor, and communication with a CloudReactor process wrapper"
   s.license     = "BSD-2-Clause"
