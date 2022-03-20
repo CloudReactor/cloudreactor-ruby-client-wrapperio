@@ -9,6 +9,6 @@ group :development, :test do
   gem 'dotenv', '~> 2'
   gem 'rubocop', '~> 1'
   gem 'rubocop-rspec', require: false
-  gem 'rubocop-rake', require: false  
+  gem 'rubocop-rake', require: false
             
 end
