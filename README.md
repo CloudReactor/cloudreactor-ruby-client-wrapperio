@@ -97,6 +97,7 @@ end
 
 ## More documentation
 
+* [RubyDoc](https://www.rubydoc.info/gems/cloudreactor_api_client/)
 * [CloudReactor API documentation](https://apidocs.cloudreactor.io/)
 
 ## License
