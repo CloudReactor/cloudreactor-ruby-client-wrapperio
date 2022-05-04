@@ -4,25 +4,25 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **type** | **String** |  | [readonly] |
+| **type** | **String** |  | [optional][readonly] |
 | **task_definition_arn** | **String** |  | [optional] |
-| **task_definition_infrastructure_website_url** | **String** |  | [readonly] |
+| **task_definition_infrastructure_website_url** | **String** |  | [optional][readonly] |
 | **allocated_cpu_units** | **Integer** |  | [optional] |
 | **allocated_memory_mb** | **Integer** |  | [optional] |
 | **tags** | **Hash&lt;String, String&gt;** |  |  |
 | **subnets** | **Array&lt;String&gt;** |  | [optional] |
-| **subnet_infrastructure_website_urls** | **Array&lt;String&gt;** |  | [readonly] |
+| **subnet_infrastructure_website_urls** | **Array&lt;String&gt;** |  | [optional][readonly] |
 | **security_groups** | **Array&lt;String&gt;** |  | [optional] |
-| **security_group_infrastructure_website_urls** | **Array&lt;String&gt;** |  | [readonly] |
+| **security_group_infrastructure_website_urls** | **Array&lt;String&gt;** |  | [optional][readonly] |
 | **assign_public_ip** | **Boolean** |  | [optional] |
 | **task_arn** | **String** |  | [optional] |
 | **launch_type** | [**AwsEcsLaunchType**](AwsEcsLaunchType.md) |  | [optional] |
 | **cluster_arn** | **String** |  | [optional] |
-| **cluster_infrastructure_website_url** | **String** |  | [readonly] |
+| **cluster_infrastructure_website_url** | **String** |  | [optional][readonly] |
 | **execution_role** | **String** |  | [optional] |
-| **execution_role_infrastructure_website_url** | **String** |  | [readonly] |
+| **execution_role_infrastructure_website_url** | **String** |  | [optional][readonly] |
 | **task_role** | **String** |  | [optional] |
-| **task_role_infrastructure_website_url** | **String** |  | [readonly] |
+| **task_role_infrastructure_website_url** | **String** |  | [optional][readonly] |
 | **platform_version** | **String** |  | [optional] |
 
 ## Example

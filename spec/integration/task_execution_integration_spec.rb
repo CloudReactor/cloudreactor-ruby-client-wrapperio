@@ -13,7 +13,7 @@ describe 'Task Execution Integration', :integration do
     c.server_index = nil
 
     c.host = ENV['CLOUDREACTOR_API_HOST']
-    c.api_key['tokenAuth'] = ENV['CLOUDREACTOR_API_KEY']
+    c.access_token = ENV['CLOUDREACTOR_API_KEY']
 
     c
   end

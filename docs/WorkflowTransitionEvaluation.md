@@ -4,12 +4,12 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **uuid** | **String** |  | [readonly] |
-| **result** | **Boolean** |  | [readonly] |
-| **workflow_transition** | [**NameAndUuid**](NameAndUuid.md) |  | [readonly] |
-| **workflow_execution** | [**NameAndUuid**](NameAndUuid.md) |  | [readonly] |
-| **from_workflow_task_instance_execution** | **String** |  | [readonly] |
-| **evaluated_at** | **Time** |  | [readonly] |
+| **uuid** | **String** |  | [optional][readonly] |
+| **result** | **Boolean** |  | [optional][readonly] |
+| **workflow_transition** | [**NameAndUuid**](NameAndUuid.md) |  | [optional][readonly] |
+| **workflow_execution** | [**NameAndUuid**](NameAndUuid.md) |  | [optional][readonly] |
+| **from_workflow_task_instance_execution** | **String** |  | [optional][readonly] |
+| **evaluated_at** | **Time** |  | [optional][readonly] |
 
 ## Example
 

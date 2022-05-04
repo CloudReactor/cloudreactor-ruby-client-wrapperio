@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **load_balancers** | [**Array&lt;AwsEcsServiceLoadBalancerDetails&gt;**](AwsEcsServiceLoadBalancerDetails.md) |  | [readonly] |
+| **load_balancers** | [**Array&lt;AwsEcsServiceLoadBalancerDetails&gt;**](AwsEcsServiceLoadBalancerDetails.md) |  | [optional][readonly] |
 | **health_check_grace_period_seconds** | **Integer** |  | [optional] |
 | **force_new_deployment** | **Boolean** |  | [optional] |
 | **deploy_minimum_healthy_percent** | **Integer** |  | [optional] |

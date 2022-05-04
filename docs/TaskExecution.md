@@ -4,27 +4,27 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **url** | **String** |  | [readonly] |
-| **uuid** | **String** |  | [readonly] |
-| **dashboard_url** | **String** |  | [readonly] |
-| **infrastructure_website_url** | **String** |  | [readonly] |
+| **url** | **String** |  | [optional][readonly] |
+| **uuid** | **String** |  | [optional][readonly] |
+| **dashboard_url** | **String** |  | [optional][readonly] |
+| **infrastructure_website_url** | **String** |  | [optional][readonly] |
 | **task** | [**NameAndUuid**](NameAndUuid.md) |  | [optional] |
 | **task_version_number** | **Integer** |  | [optional] |
 | **task_version_text** | **String** |  | [optional] |
 | **task_version_signature** | **String** |  | [optional] |
-| **commit_url** | **String** |  | [readonly] |
+| **commit_url** | **String** |  | [optional][readonly] |
 | **other_instance_metadata** | **Hash&lt;String, Object&gt;** |  | [optional] |
 | **hostname** | **String** |  | [optional] |
 | **environment_variables_overrides** | **Hash&lt;String, Object&gt;** |  | [optional] |
-| **execution_method** | [**AwsEcsExecutionMethod**](AwsEcsExecutionMethod.md) |  | [readonly] |
+| **execution_method** | [**AwsEcsExecutionMethod**](AwsEcsExecutionMethod.md) |  | [optional][readonly] |
 | **status** | [**TaskExecutionStatus**](TaskExecutionStatus.md) |  |  |
-| **started_by** | **String** | Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only. | [readonly] |
-| **started_at** | **Time** |  | [readonly] |
+| **started_by** | **String** | Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only. | [optional][readonly] |
+| **started_at** | **Time** |  | [optional][readonly] |
 | **finished_at** | **Time** |  | [optional] |
-| **marked_done_by** | **String** | Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only. | [readonly] |
+| **marked_done_by** | **String** | Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only. | [optional][readonly] |
 | **marked_done_at** | **Time** |  | [optional] |
 | **marked_outdated_at** | **Time** |  | [optional] |
-| **killed_by** | **String** | Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only. | [readonly] |
+| **killed_by** | **String** | Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only. | [optional][readonly] |
 | **kill_started_at** | **Time** |  | [optional] |
 | **kill_finished_at** | **Time** |  | [optional] |
 | **kill_error_code** | **Integer** |  | [optional] |
@@ -59,7 +59,7 @@
 | **process_retry_delay_seconds** | **Integer** |  | [optional] |
 | **schedule** | **String** |  | [optional] |
 | **heartbeat_interval_seconds** | **Integer** |  | [optional] |
-| **workflow_task_instance_execution** | [**WorkflowTaskInstanceExecutionBase**](WorkflowTaskInstanceExecutionBase.md) |  | [readonly] |
+| **workflow_task_instance_execution** | [**WorkflowTaskInstanceExecutionBase**](WorkflowTaskInstanceExecutionBase.md) |  | [optional][readonly] |
 | **api_base_url** | **String** |  | [optional] |
 | **api_request_timeout_seconds** | **Integer** |  | [optional] |
 | **api_retry_delay_seconds** | **Integer** |  | [optional] |
@@ -75,8 +75,8 @@
 | **debug_log_tail** | **String** |  | [optional] |
 | **error_log_tail** | **String** |  | [optional] |
 | **embedded_mode** | **Boolean** |  | [optional] |
-| **created_at** | **Time** |  | [readonly] |
-| **updated_at** | **Time** |  | [readonly] |
+| **created_at** | **Time** |  | [optional][readonly] |
+| **updated_at** | **Time** |  | [optional][readonly] |
 
 ## Example
 

@@ -4,15 +4,15 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **url** | **String** |  | [readonly] |
-| **uuid** | **String** |  | [readonly] |
+| **url** | **String** |  | [optional][readonly] |
+| **uuid** | **String** |  | [optional][readonly] |
 | **name** | **String** |  |  |
 | **description** | **String** |  | [optional] |
-| **dashboard_url** | **String** |  | [readonly] |
-| **created_by_user** | **String** | Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only. | [readonly] |
-| **created_by_group** | [**Group**](Group.md) |  | [readonly] |
-| **created_at** | **Time** |  | [readonly] |
-| **updated_at** | **Time** |  | [readonly] |
+| **dashboard_url** | **String** |  | [optional][readonly] |
+| **created_by_user** | **String** | Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only. | [optional][readonly] |
+| **created_by_group** | [**Group**](Group.md) |  | [optional][readonly] |
+| **created_at** | **Time** |  | [optional][readonly] |
+| **updated_at** | **Time** |  | [optional][readonly] |
 | **aws_account_id** | **String** |  | [optional] |
 | **aws_default_region** | **String** |  | [optional] |
 | **aws_access_key** | **String** |  | [optional] |
@@ -21,7 +21,7 @@
 | **aws_workflow_starter_lambda_arn** | **String** |  | [optional] |
 | **aws_workflow_starter_access_key** | **String** |  | [optional] |
 | **default_alert_methods** | [**Array&lt;NameAndUuid&gt;**](NameAndUuid.md) |  | [optional] |
-| **execution_method_capabilities** | [**Array&lt;AwsEcsRunEnvironmentExecutionMethodCapability&gt;**](AwsEcsRunEnvironmentExecutionMethodCapability.md) |  | [readonly] |
+| **execution_method_capabilities** | [**Array&lt;AwsEcsRunEnvironmentExecutionMethodCapability&gt;**](AwsEcsRunEnvironmentExecutionMethodCapability.md) |  | [optional][readonly] |
 
 ## Example
 

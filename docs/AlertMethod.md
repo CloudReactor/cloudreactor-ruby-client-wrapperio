@@ -4,24 +4,24 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **url** | **String** |  | [readonly] |
-| **uuid** | **String** |  | [readonly] |
+| **url** | **String** |  | [optional][readonly] |
+| **uuid** | **String** |  | [optional][readonly] |
 | **name** | **String** |  |  |
 | **description** | **String** |  | [optional] |
-| **dashboard_url** | **String** |  | [readonly] |
+| **dashboard_url** | **String** |  | [optional][readonly] |
 | **enabled** | **Boolean** |  | [optional] |
-| **method_details** | **Hash&lt;String, Object&gt;** |  | [readonly] |
+| **method_details** | **Hash&lt;String, Object&gt;** |  | [optional][readonly] |
 | **notify_on_success** | **Boolean** |  | [optional] |
 | **notify_on_failure** | **Boolean** |  | [optional] |
 | **notify_on_timeout** | **Boolean** |  | [optional] |
 | **error_severity_on_missing_execution** | [**NotificationSeverity**](NotificationSeverity.md) |  | [optional] |
 | **error_severity_on_missing_heartbeat** | [**NotificationSeverity**](NotificationSeverity.md) |  | [optional] |
 | **error_severity_on_service_down** | [**NotificationSeverity**](NotificationSeverity.md) |  | [optional] |
-| **created_by_user** | **String** | Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only. | [readonly] |
-| **created_by_group** | [**Group**](Group.md) |  | [readonly] |
+| **created_by_user** | **String** | Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only. | [optional][readonly] |
+| **created_by_group** | [**Group**](Group.md) |  | [optional][readonly] |
 | **run_environment** | [**NameAndUuid**](NameAndUuid.md) |  | [optional] |
-| **created_at** | **Time** |  | [readonly] |
-| **updated_at** | **Time** |  | [readonly] |
+| **created_at** | **Time** |  | [optional][readonly] |
+| **updated_at** | **Time** |  | [optional][readonly] |
 
 ## Example
 

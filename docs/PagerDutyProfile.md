@@ -4,21 +4,21 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **url** | **String** |  | [readonly] |
-| **uuid** | **String** |  | [readonly] |
+| **url** | **String** |  | [optional][readonly] |
+| **uuid** | **String** |  | [optional][readonly] |
 | **name** | **String** |  |  |
 | **description** | **String** |  | [optional] |
-| **dashboard_url** | **String** |  | [readonly] |
+| **dashboard_url** | **String** |  | [optional][readonly] |
 | **integration_key** | **String** |  |  |
 | **default_event_severity** | [**NotificationSeverity**](NotificationSeverity.md) |  | [optional] |
 | **default_event_component_template** | **String** |  | [optional] |
 | **default_event_group_template** | **String** |  | [optional] |
 | **default_event_class_template** | **String** |  | [optional] |
-| **created_by_user** | **String** | Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only. | [readonly] |
-| **created_by_group** | [**Group**](Group.md) |  | [readonly] |
+| **created_by_user** | **String** | Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only. | [optional][readonly] |
+| **created_by_group** | [**Group**](Group.md) |  | [optional][readonly] |
 | **run_environment** | [**NameAndUuid**](NameAndUuid.md) |  | [optional] |
-| **created_at** | **Time** |  | [readonly] |
-| **updated_at** | **Time** |  | [readonly] |
+| **created_at** | **Time** |  | [optional][readonly] |
+| **updated_at** | **Time** |  | [optional][readonly] |
 
 ## Example
 

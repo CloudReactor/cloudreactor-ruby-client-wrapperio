@@ -4,12 +4,12 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **uuid** | **String** |  | [readonly] |
-| **workflow_execution** | [**NameAndUuid**](NameAndUuid.md) |  | [readonly] |
-| **workflow_task_instance** | [**NameAndUuid**](NameAndUuid.md) |  | [readonly] |
-| **task_execution** | [**TaskExecution**](TaskExecution.md) |  | [readonly] |
-| **is_latest** | **Boolean** |  | [readonly] |
-| **created_at** | **Time** |  | [readonly] |
+| **uuid** | **String** |  | [optional][readonly] |
+| **workflow_execution** | [**NameAndUuid**](NameAndUuid.md) |  | [optional][readonly] |
+| **workflow_task_instance** | [**NameAndUuid**](NameAndUuid.md) |  | [optional][readonly] |
+| **task_execution** | [**TaskExecution**](TaskExecution.md) |  | [optional][readonly] |
+| **is_latest** | **Boolean** |  | [optional][readonly] |
+| **created_at** | **Time** |  | [optional][readonly] |
 
 ## Example
 

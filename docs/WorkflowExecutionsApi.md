@@ -27,14 +27,12 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::WorkflowExecutionsApi.new
-workflow_execution = CloudReactorAPIClient::WorkflowExecution.new({url: 'url_example', uuid: 'uuid_example', dashboard_url: 'dashboard_url_example', workflow: CloudReactorAPIClient::NameAndUuid.new({url: 'url_example'}), status: CloudReactorAPIClient::WorkflowExecutionStatus::RUNNING, started_at: Time.now, started_by: 'started_by_example', marked_done_by: 'marked_done_by_example', killed_by: 'killed_by_example', workflow_snapshot: { key: 3.56}, workflow_task_instance_executions: [CloudReactorAPIClient::WorkflowTaskInstanceExecution.new({uuid: 'uuid_example', workflow_execution: CloudReactorAPIClient::NameAndUuid.new({url: 'url_example'}), workflow_task_instance: , task_execution: CloudReactorAPIClient::TaskExecution.new({url: 'url_example', uuid: 'uuid_example', dashboard_url: 'dashboard_url_example', infrastructure_website_url: 'infrastructure_website_url_example', commit_url: 'commit_url_example', execution_method: CloudReactorAPIClient::AwsEcsExecutionMethod.new({type: 'type_example', task_definition_infrastructure_website_url: 'task_definition_infrastructure_website_url_example', tags: { key: 'inner_example'}, subnet_infrastructure_website_urls: ['subnet_infrastructure_website_urls_example'], security_group_infrastructure_website_urls: ['security_group_infrastructure_website_urls_example'], cluster_infrastructure_website_url: 'cluster_infrastructure_website_url_example', execution_role_infrastructure_website_url: 'execution_role_infrastructure_website_url_example', task_role_infrastructure_website_url: 'task_role_infrastructure_website_url_example'}), status: CloudReactorAPIClient::TaskExecutionStatus::RUNNING, started_by: 'started_by_example', started_at: Time.now, marked_done_by: 'marked_done_by_example', killed_by: 'killed_by_example', workflow_task_instance_execution: CloudReactorAPIClient::WorkflowTaskInstanceExecutionBase.new({uuid: 'uuid_example', workflow_execution: , workflow_task_instance: , is_latest: false, created_at: Time.now}), created_at: Time.now, updated_at: Time.now}), is_latest: false, created_at: Time.now})], workflow_transition_evaluations: [CloudReactorAPIClient::WorkflowTransitionEvaluation.new({uuid: 'uuid_example', result: false, workflow_transition: , workflow_execution: , from_workflow_task_instance_execution: 'from_workflow_task_instance_execution_example', evaluated_at: Time.now})], created_at: Time.now, updated_at: Time.now}) # WorkflowExecution | 
+workflow_execution = CloudReactorAPIClient::WorkflowExecution.new({workflow: CloudReactorAPIClient::NameAndUuid.new, status: CloudReactorAPIClient::WorkflowExecutionStatus::RUNNING}) # WorkflowExecution | 
 
 begin
   
@@ -79,7 +77,7 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
@@ -96,10 +94,8 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::WorkflowExecutionsApi.new
@@ -164,10 +160,8 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::WorkflowExecutionsApi.new
@@ -245,10 +239,8 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::WorkflowExecutionsApi.new
@@ -301,7 +293,7 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
@@ -318,10 +310,8 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::WorkflowExecutionsApi.new
@@ -387,15 +377,13 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::WorkflowExecutionsApi.new
 uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | 
-workflow_execution = CloudReactorAPIClient::WorkflowExecution.new({url: 'url_example', uuid: 'uuid_example', dashboard_url: 'dashboard_url_example', workflow: CloudReactorAPIClient::NameAndUuid.new({url: 'url_example'}), status: CloudReactorAPIClient::WorkflowExecutionStatus::RUNNING, started_at: Time.now, started_by: 'started_by_example', marked_done_by: 'marked_done_by_example', killed_by: 'killed_by_example', workflow_snapshot: { key: 3.56}, workflow_task_instance_executions: [CloudReactorAPIClient::WorkflowTaskInstanceExecution.new({uuid: 'uuid_example', workflow_execution: CloudReactorAPIClient::NameAndUuid.new({url: 'url_example'}), workflow_task_instance: , task_execution: CloudReactorAPIClient::TaskExecution.new({url: 'url_example', uuid: 'uuid_example', dashboard_url: 'dashboard_url_example', infrastructure_website_url: 'infrastructure_website_url_example', commit_url: 'commit_url_example', execution_method: CloudReactorAPIClient::AwsEcsExecutionMethod.new({type: 'type_example', task_definition_infrastructure_website_url: 'task_definition_infrastructure_website_url_example', tags: { key: 'inner_example'}, subnet_infrastructure_website_urls: ['subnet_infrastructure_website_urls_example'], security_group_infrastructure_website_urls: ['security_group_infrastructure_website_urls_example'], cluster_infrastructure_website_url: 'cluster_infrastructure_website_url_example', execution_role_infrastructure_website_url: 'execution_role_infrastructure_website_url_example', task_role_infrastructure_website_url: 'task_role_infrastructure_website_url_example'}), status: CloudReactorAPIClient::TaskExecutionStatus::RUNNING, started_by: 'started_by_example', started_at: Time.now, marked_done_by: 'marked_done_by_example', killed_by: 'killed_by_example', workflow_task_instance_execution: CloudReactorAPIClient::WorkflowTaskInstanceExecutionBase.new({uuid: 'uuid_example', workflow_execution: , workflow_task_instance: , is_latest: false, created_at: Time.now}), created_at: Time.now, updated_at: Time.now}), is_latest: false, created_at: Time.now})], workflow_transition_evaluations: [CloudReactorAPIClient::WorkflowTransitionEvaluation.new({uuid: 'uuid_example', result: false, workflow_transition: , workflow_execution: , from_workflow_task_instance_execution: 'from_workflow_task_instance_execution_example', evaluated_at: Time.now})], created_at: Time.now, updated_at: Time.now}) # WorkflowExecution | 
+workflow_execution = CloudReactorAPIClient::WorkflowExecution.new({workflow: CloudReactorAPIClient::NameAndUuid.new, status: CloudReactorAPIClient::WorkflowExecutionStatus::RUNNING}) # WorkflowExecution | 
 
 begin
   
@@ -441,7 +429,7 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
@@ -458,15 +446,13 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::WorkflowExecutionsApi.new
 uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | 
-workflow_execution = CloudReactorAPIClient::WorkflowExecution.new({url: 'url_example', uuid: 'uuid_example', dashboard_url: 'dashboard_url_example', workflow: CloudReactorAPIClient::NameAndUuid.new({url: 'url_example'}), status: CloudReactorAPIClient::WorkflowExecutionStatus::RUNNING, started_at: Time.now, started_by: 'started_by_example', marked_done_by: 'marked_done_by_example', killed_by: 'killed_by_example', workflow_snapshot: { key: 3.56}, workflow_task_instance_executions: [CloudReactorAPIClient::WorkflowTaskInstanceExecution.new({uuid: 'uuid_example', workflow_execution: CloudReactorAPIClient::NameAndUuid.new({url: 'url_example'}), workflow_task_instance: , task_execution: CloudReactorAPIClient::TaskExecution.new({url: 'url_example', uuid: 'uuid_example', dashboard_url: 'dashboard_url_example', infrastructure_website_url: 'infrastructure_website_url_example', commit_url: 'commit_url_example', execution_method: CloudReactorAPIClient::AwsEcsExecutionMethod.new({type: 'type_example', task_definition_infrastructure_website_url: 'task_definition_infrastructure_website_url_example', tags: { key: 'inner_example'}, subnet_infrastructure_website_urls: ['subnet_infrastructure_website_urls_example'], security_group_infrastructure_website_urls: ['security_group_infrastructure_website_urls_example'], cluster_infrastructure_website_url: 'cluster_infrastructure_website_url_example', execution_role_infrastructure_website_url: 'execution_role_infrastructure_website_url_example', task_role_infrastructure_website_url: 'task_role_infrastructure_website_url_example'}), status: CloudReactorAPIClient::TaskExecutionStatus::RUNNING, started_by: 'started_by_example', started_at: Time.now, marked_done_by: 'marked_done_by_example', killed_by: 'killed_by_example', workflow_task_instance_execution: CloudReactorAPIClient::WorkflowTaskInstanceExecutionBase.new({uuid: 'uuid_example', workflow_execution: , workflow_task_instance: , is_latest: false, created_at: Time.now}), created_at: Time.now, updated_at: Time.now}), is_latest: false, created_at: Time.now})], workflow_transition_evaluations: [CloudReactorAPIClient::WorkflowTransitionEvaluation.new({uuid: 'uuid_example', result: false, workflow_transition: , workflow_execution: , from_workflow_task_instance_execution: 'from_workflow_task_instance_execution_example', evaluated_at: Time.now})], created_at: Time.now, updated_at: Time.now}) # WorkflowExecution | 
+workflow_execution = CloudReactorAPIClient::WorkflowExecution.new({workflow: CloudReactorAPIClient::NameAndUuid.new, status: CloudReactorAPIClient::WorkflowExecutionStatus::RUNNING}) # WorkflowExecution | 
 
 begin
   
@@ -512,7 +498,7 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
@@ -529,15 +515,13 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::WorkflowExecutionsApi.new
 uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | 
-workflow_execution = CloudReactorAPIClient::WorkflowExecution.new({url: 'url_example', uuid: 'uuid_example', dashboard_url: 'dashboard_url_example', workflow: CloudReactorAPIClient::NameAndUuid.new({url: 'url_example'}), status: CloudReactorAPIClient::WorkflowExecutionStatus::RUNNING, started_at: Time.now, started_by: 'started_by_example', marked_done_by: 'marked_done_by_example', killed_by: 'killed_by_example', workflow_snapshot: { key: 3.56}, workflow_task_instance_executions: [CloudReactorAPIClient::WorkflowTaskInstanceExecution.new({uuid: 'uuid_example', workflow_execution: CloudReactorAPIClient::NameAndUuid.new({url: 'url_example'}), workflow_task_instance: , task_execution: CloudReactorAPIClient::TaskExecution.new({url: 'url_example', uuid: 'uuid_example', dashboard_url: 'dashboard_url_example', infrastructure_website_url: 'infrastructure_website_url_example', commit_url: 'commit_url_example', execution_method: CloudReactorAPIClient::AwsEcsExecutionMethod.new({type: 'type_example', task_definition_infrastructure_website_url: 'task_definition_infrastructure_website_url_example', tags: { key: 'inner_example'}, subnet_infrastructure_website_urls: ['subnet_infrastructure_website_urls_example'], security_group_infrastructure_website_urls: ['security_group_infrastructure_website_urls_example'], cluster_infrastructure_website_url: 'cluster_infrastructure_website_url_example', execution_role_infrastructure_website_url: 'execution_role_infrastructure_website_url_example', task_role_infrastructure_website_url: 'task_role_infrastructure_website_url_example'}), status: CloudReactorAPIClient::TaskExecutionStatus::RUNNING, started_by: 'started_by_example', started_at: Time.now, marked_done_by: 'marked_done_by_example', killed_by: 'killed_by_example', workflow_task_instance_execution: CloudReactorAPIClient::WorkflowTaskInstanceExecutionBase.new({uuid: 'uuid_example', workflow_execution: , workflow_task_instance: , is_latest: false, created_at: Time.now}), created_at: Time.now, updated_at: Time.now}), is_latest: false, created_at: Time.now})], workflow_transition_evaluations: [CloudReactorAPIClient::WorkflowTransitionEvaluation.new({uuid: 'uuid_example', result: false, workflow_transition: , workflow_execution: , from_workflow_task_instance_execution: 'from_workflow_task_instance_execution_example', evaluated_at: Time.now})], created_at: Time.now, updated_at: Time.now}) # WorkflowExecution | 
+workflow_execution = CloudReactorAPIClient::WorkflowExecution.new({workflow: CloudReactorAPIClient::NameAndUuid.new, status: CloudReactorAPIClient::WorkflowExecutionStatus::RUNNING}) # WorkflowExecution | 
 
 begin
   
@@ -583,6 +567,6 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+- **Content-Type**: application/json
 - **Accept**: application/json
 

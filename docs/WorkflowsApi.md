@@ -26,15 +26,13 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::WorkflowsApi.new
 uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | 
-workflow = CloudReactorAPIClient::Workflow.new({url: 'url_example', uuid: 'uuid_example', name: 'name_example', dashboard_url: 'dashboard_url_example', created_by_user: 'created_by_user_example', created_by_group: CloudReactorAPIClient::Group.new({id: 37, name: 'name_example', url: 'url_example'}), created_at: Time.now, updated_at: Time.now, workflow_task_instances: [CloudReactorAPIClient::WorkflowTaskInstance.new({url: 'url_example', uuid: 'uuid_example', name: 'name_example', workflow: CloudReactorAPIClient::NameAndUuid.new({url: 'url_example'}), task: CloudReactorAPIClient::NameAndUuid.new({url: 'url_example'}), created_at: Time.now, updated_at: Time.now})], workflow_transitions: [CloudReactorAPIClient::WorkflowTransition.new({url: 'url_example', uuid: 'uuid_example', from_workflow_task_instance: , to_workflow_task_instance: , rule_type: CloudReactorAPIClient::RuleTypeEnum::ALWAYS, created_at: Time.now, updated_at: Time.now})]}) # Workflow | 
+workflow = CloudReactorAPIClient::Workflow.new({name: 'name_example'}) # Workflow | 
 
 begin
   
@@ -80,7 +78,7 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
@@ -97,14 +95,12 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::WorkflowsApi.new
-workflow = CloudReactorAPIClient::Workflow.new({url: 'url_example', uuid: 'uuid_example', name: 'name_example', dashboard_url: 'dashboard_url_example', created_by_user: 'created_by_user_example', created_by_group: CloudReactorAPIClient::Group.new({id: 37, name: 'name_example', url: 'url_example'}), created_at: Time.now, updated_at: Time.now, workflow_task_instances: [CloudReactorAPIClient::WorkflowTaskInstance.new({url: 'url_example', uuid: 'uuid_example', name: 'name_example', workflow: CloudReactorAPIClient::NameAndUuid.new({url: 'url_example'}), task: CloudReactorAPIClient::NameAndUuid.new({url: 'url_example'}), created_at: Time.now, updated_at: Time.now})], workflow_transitions: [CloudReactorAPIClient::WorkflowTransition.new({url: 'url_example', uuid: 'uuid_example', from_workflow_task_instance: , to_workflow_task_instance: , rule_type: CloudReactorAPIClient::RuleTypeEnum::ALWAYS, created_at: Time.now, updated_at: Time.now})]}) # Workflow | 
+workflow = CloudReactorAPIClient::Workflow.new({name: 'name_example'}) # Workflow | 
 
 begin
   
@@ -149,7 +145,7 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
@@ -166,10 +162,8 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::WorkflowsApi.new
@@ -234,10 +228,8 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::WorkflowsApi.new
@@ -317,10 +309,8 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::WorkflowsApi.new
@@ -373,7 +363,7 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
@@ -390,10 +380,8 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::WorkflowsApi.new
@@ -459,15 +447,13 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::WorkflowsApi.new
 uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | 
-workflow = CloudReactorAPIClient::Workflow.new({url: 'url_example', uuid: 'uuid_example', name: 'name_example', dashboard_url: 'dashboard_url_example', created_by_user: 'created_by_user_example', created_by_group: CloudReactorAPIClient::Group.new({id: 37, name: 'name_example', url: 'url_example'}), created_at: Time.now, updated_at: Time.now, workflow_task_instances: [CloudReactorAPIClient::WorkflowTaskInstance.new({url: 'url_example', uuid: 'uuid_example', name: 'name_example', workflow: CloudReactorAPIClient::NameAndUuid.new({url: 'url_example'}), task: CloudReactorAPIClient::NameAndUuid.new({url: 'url_example'}), created_at: Time.now, updated_at: Time.now})], workflow_transitions: [CloudReactorAPIClient::WorkflowTransition.new({url: 'url_example', uuid: 'uuid_example', from_workflow_task_instance: , to_workflow_task_instance: , rule_type: CloudReactorAPIClient::RuleTypeEnum::ALWAYS, created_at: Time.now, updated_at: Time.now})]}) # Workflow | 
+workflow = CloudReactorAPIClient::Workflow.new({name: 'name_example'}) # Workflow | 
 
 begin
   
@@ -513,6 +499,6 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+- **Content-Type**: application/json
 - **Accept**: application/json
 

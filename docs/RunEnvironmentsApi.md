@@ -26,15 +26,13 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::RunEnvironmentsApi.new
 uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | 
-run_environment = CloudReactorAPIClient::RunEnvironment.new({url: 'url_example', uuid: 'uuid_example', name: 'name_example', dashboard_url: 'dashboard_url_example', created_by_user: 'created_by_user_example', created_by_group: CloudReactorAPIClient::Group.new({id: 37, name: 'name_example', url: 'url_example'}), created_at: Time.now, updated_at: Time.now, execution_method_capabilities: [CloudReactorAPIClient::AwsEcsRunEnvironmentExecutionMethodCapability.new({type: 'type_example', capabilities: ['capabilities_example'], tags: { key: 'inner_example'}, default_subnet_infrastructure_website_urls: ['default_subnet_infrastructure_website_urls_example'], default_cluster_infrastructure_website_url: 'default_cluster_infrastructure_website_url_example', default_security_group_infrastructure_website_urls: ['default_security_group_infrastructure_website_urls_example'], default_execution_role_infrastructure_website_url: 'default_execution_role_infrastructure_website_url_example', default_task_role_infrastructure_website_url: 'default_task_role_infrastructure_website_url_example'})]}) # RunEnvironment | 
+run_environment = CloudReactorAPIClient::RunEnvironment.new({name: 'name_example'}) # RunEnvironment | 
 
 begin
   
@@ -80,7 +78,7 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
@@ -97,14 +95,12 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::RunEnvironmentsApi.new
-run_environment = CloudReactorAPIClient::RunEnvironment.new({url: 'url_example', uuid: 'uuid_example', name: 'name_example', dashboard_url: 'dashboard_url_example', created_by_user: 'created_by_user_example', created_by_group: CloudReactorAPIClient::Group.new({id: 37, name: 'name_example', url: 'url_example'}), created_at: Time.now, updated_at: Time.now, execution_method_capabilities: [CloudReactorAPIClient::AwsEcsRunEnvironmentExecutionMethodCapability.new({type: 'type_example', capabilities: ['capabilities_example'], tags: { key: 'inner_example'}, default_subnet_infrastructure_website_urls: ['default_subnet_infrastructure_website_urls_example'], default_cluster_infrastructure_website_url: 'default_cluster_infrastructure_website_url_example', default_security_group_infrastructure_website_urls: ['default_security_group_infrastructure_website_urls_example'], default_execution_role_infrastructure_website_url: 'default_execution_role_infrastructure_website_url_example', default_task_role_infrastructure_website_url: 'default_task_role_infrastructure_website_url_example'})]}) # RunEnvironment | 
+run_environment = CloudReactorAPIClient::RunEnvironment.new({name: 'name_example'}) # RunEnvironment | 
 
 begin
   
@@ -149,7 +145,7 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
@@ -166,10 +162,8 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::RunEnvironmentsApi.new
@@ -234,10 +228,8 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::RunEnvironmentsApi.new
@@ -315,10 +307,8 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::RunEnvironmentsApi.new
@@ -371,7 +361,7 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
@@ -388,10 +378,8 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::RunEnvironmentsApi.new
@@ -457,15 +445,13 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::RunEnvironmentsApi.new
 uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | 
-run_environment = CloudReactorAPIClient::RunEnvironment.new({url: 'url_example', uuid: 'uuid_example', name: 'name_example', dashboard_url: 'dashboard_url_example', created_by_user: 'created_by_user_example', created_by_group: CloudReactorAPIClient::Group.new({id: 37, name: 'name_example', url: 'url_example'}), created_at: Time.now, updated_at: Time.now, execution_method_capabilities: [CloudReactorAPIClient::AwsEcsRunEnvironmentExecutionMethodCapability.new({type: 'type_example', capabilities: ['capabilities_example'], tags: { key: 'inner_example'}, default_subnet_infrastructure_website_urls: ['default_subnet_infrastructure_website_urls_example'], default_cluster_infrastructure_website_url: 'default_cluster_infrastructure_website_url_example', default_security_group_infrastructure_website_urls: ['default_security_group_infrastructure_website_urls_example'], default_execution_role_infrastructure_website_url: 'default_execution_role_infrastructure_website_url_example', default_task_role_infrastructure_website_url: 'default_task_role_infrastructure_website_url_example'})]}) # RunEnvironment | 
+run_environment = CloudReactorAPIClient::RunEnvironment.new({name: 'name_example'}) # RunEnvironment | 
 
 begin
   
@@ -511,6 +497,6 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+- **Content-Type**: application/json
 - **Accept**: application/json
 

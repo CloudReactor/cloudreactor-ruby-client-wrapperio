@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **type** | **String** |  | [readonly] |
-| **capabilities** | **Array&lt;String&gt;** |  | [readonly] |
+| **type** | **String** |  | [optional][readonly] |
+| **capabilities** | **Array&lt;String&gt;** |  | [optional][readonly] |
 
 ## Example
 

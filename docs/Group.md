@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | **Integer** |  | [readonly] |
+| **id** | **Integer** |  | [optional][readonly] |
 | **name** | **String** |  |  |
-| **url** | **String** |  | [readonly] |
+| **url** | **String** |  | [optional][readonly] |
 
 ## Example
 

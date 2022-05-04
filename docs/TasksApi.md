@@ -25,14 +25,12 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::TasksApi.new
-task = CloudReactorAPIClient::Task.new({url: 'url_example', uuid: 'uuid_example', name: 'name_example', dashboard_url: 'dashboard_url_example', infrastructure_website_url: 'infrastructure_website_url_example', is_service: false, logs_url: 'logs_url_example', execution_method_capability: CloudReactorAPIClient::AwsEcsExecutionMethodCapability.new({task_definition_infrastructure_website_url: 'task_definition_infrastructure_website_url_example', type: 'type_example', capabilities: ['capabilities_example'], tags: { key: 'inner_example'}, default_subnet_infrastructure_website_urls: ['default_subnet_infrastructure_website_urls_example'], default_cluster_infrastructure_website_url: 'default_cluster_infrastructure_website_url_example', default_security_group_infrastructure_website_urls: ['default_security_group_infrastructure_website_urls_example'], default_execution_role_infrastructure_website_url: 'default_execution_role_infrastructure_website_url_example', default_task_role_infrastructure_website_url: 'default_task_role_infrastructure_website_url_example'}), latest_task_execution: CloudReactorAPIClient::TaskExecution.new({url: 'url_example', uuid: 'uuid_example', dashboard_url: 'dashboard_url_example', infrastructure_website_url: 'infrastructure_website_url_example', commit_url: 'commit_url_example', execution_method: CloudReactorAPIClient::AwsEcsExecutionMethod.new({type: 'type_example', task_definition_infrastructure_website_url: 'task_definition_infrastructure_website_url_example', tags: { key: 'inner_example'}, subnet_infrastructure_website_urls: ['subnet_infrastructure_website_urls_example'], security_group_infrastructure_website_urls: ['security_group_infrastructure_website_urls_example'], cluster_infrastructure_website_url: 'cluster_infrastructure_website_url_example', execution_role_infrastructure_website_url: 'execution_role_infrastructure_website_url_example', task_role_infrastructure_website_url: 'task_role_infrastructure_website_url_example'}), status: CloudReactorAPIClient::TaskExecutionStatus::RUNNING, started_by: 'started_by_example', started_at: Time.now, marked_done_by: 'marked_done_by_example', killed_by: 'killed_by_example', workflow_task_instance_execution: CloudReactorAPIClient::WorkflowTaskInstanceExecutionBase.new({uuid: 'uuid_example', workflow_execution: CloudReactorAPIClient::NameAndUuid.new({url: 'url_example'}), workflow_task_instance: CloudReactorAPIClient::NameAndUuid.new({url: 'url_example'}), is_latest: false, created_at: Time.now}), created_at: Time.now, updated_at: Time.now}), current_service_info: CloudReactorAPIClient::CurrentServiceInfo.new({type: 'type_example', service_arn: 'service_arn_example', service_infrastructure_website_url: 'service_infrastructure_website_url_example', service_arn_updated_at: Time.now}), created_by_user: 'created_by_user_example', created_by_group: CloudReactorAPIClient::Group.new({id: 37, name: 'name_example', url: 'url_example'}), created_at: Time.now, updated_at: Time.now}) # Task | 
+task = CloudReactorAPIClient::Task.new({name: 'name_example'}) # Task | 
 
 begin
   
@@ -77,7 +75,7 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
@@ -94,10 +92,8 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::TasksApi.new
@@ -162,10 +158,8 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::TasksApi.new
@@ -245,10 +239,8 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::TasksApi.new
@@ -301,7 +293,7 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
@@ -318,10 +310,8 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::TasksApi.new
@@ -387,15 +377,13 @@ require 'time'
 require 'cloudreactor_api_client'
 # setup authorization
 CloudReactorAPIClient.configure do |config|
-  # Configure API key authorization: tokenAuth
-  config.api_key['tokenAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['tokenAuth'] = 'Bearer'
+  # Configure Bearer authorization: tokenAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
 api_instance = CloudReactorAPIClient::TasksApi.new
 uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | 
-task = CloudReactorAPIClient::Task.new({url: 'url_example', uuid: 'uuid_example', name: 'name_example', dashboard_url: 'dashboard_url_example', infrastructure_website_url: 'infrastructure_website_url_example', is_service: false, logs_url: 'logs_url_example', execution_method_capability: CloudReactorAPIClient::AwsEcsExecutionMethodCapability.new({task_definition_infrastructure_website_url: 'task_definition_infrastructure_website_url_example', type: 'type_example', capabilities: ['capabilities_example'], tags: { key: 'inner_example'}, default_subnet_infrastructure_website_urls: ['default_subnet_infrastructure_website_urls_example'], default_cluster_infrastructure_website_url: 'default_cluster_infrastructure_website_url_example', default_security_group_infrastructure_website_urls: ['default_security_group_infrastructure_website_urls_example'], default_execution_role_infrastructure_website_url: 'default_execution_role_infrastructure_website_url_example', default_task_role_infrastructure_website_url: 'default_task_role_infrastructure_website_url_example'}), latest_task_execution: CloudReactorAPIClient::TaskExecution.new({url: 'url_example', uuid: 'uuid_example', dashboard_url: 'dashboard_url_example', infrastructure_website_url: 'infrastructure_website_url_example', commit_url: 'commit_url_example', execution_method: CloudReactorAPIClient::AwsEcsExecutionMethod.new({type: 'type_example', task_definition_infrastructure_website_url: 'task_definition_infrastructure_website_url_example', tags: { key: 'inner_example'}, subnet_infrastructure_website_urls: ['subnet_infrastructure_website_urls_example'], security_group_infrastructure_website_urls: ['security_group_infrastructure_website_urls_example'], cluster_infrastructure_website_url: 'cluster_infrastructure_website_url_example', execution_role_infrastructure_website_url: 'execution_role_infrastructure_website_url_example', task_role_infrastructure_website_url: 'task_role_infrastructure_website_url_example'}), status: CloudReactorAPIClient::TaskExecutionStatus::RUNNING, started_by: 'started_by_example', started_at: Time.now, marked_done_by: 'marked_done_by_example', killed_by: 'killed_by_example', workflow_task_instance_execution: CloudReactorAPIClient::WorkflowTaskInstanceExecutionBase.new({uuid: 'uuid_example', workflow_execution: CloudReactorAPIClient::NameAndUuid.new({url: 'url_example'}), workflow_task_instance: CloudReactorAPIClient::NameAndUuid.new({url: 'url_example'}), is_latest: false, created_at: Time.now}), created_at: Time.now, updated_at: Time.now}), current_service_info: CloudReactorAPIClient::CurrentServiceInfo.new({type: 'type_example', service_arn: 'service_arn_example', service_infrastructure_website_url: 'service_infrastructure_website_url_example', service_arn_updated_at: Time.now}), created_by_user: 'created_by_user_example', created_by_group: CloudReactorAPIClient::Group.new({id: 37, name: 'name_example', url: 'url_example'}), created_at: Time.now, updated_at: Time.now}) # Task | 
+task = CloudReactorAPIClient::Task.new({name: 'name_example'}) # Task | 
 
 begin
   
@@ -441,6 +429,6 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+- **Content-Type**: application/json
 - **Accept**: application/json
 

@@ -7,7 +7,7 @@
 | **uuid** | **String** |  |  |
 | **name** | **String** |  |  |
 | **link_url_template** | **String** |  |  |
-| **link_url** | **String** |  | [readonly] |
+| **link_url** | **String** |  | [optional][readonly] |
 | **icon_url** | **String** |  |  |
 | **description** | **String** |  | [optional] |
 | **rank** | **Integer** |  |  |

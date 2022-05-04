@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **url** | **String** |  | [readonly] |
-| **uuid** | **String** |  | [readonly] |
+| **url** | **String** |  | [optional][readonly] |
+| **uuid** | **String** |  | [optional][readonly] |
 | **name** | **String** |  |  |
 | **description** | **String** |  | [optional] |
 | **workflow** | [**NameAndUuid**](NameAndUuid.md) |  |  |
@@ -30,8 +30,8 @@
 | **ui_scale** | **Float** |  | [optional] |
 | **ui_center_margin_top** | **Float** |  | [optional] |
 | **ui_center_margin_left** | **Float** |  | [optional] |
-| **created_at** | **Time** |  | [readonly] |
-| **updated_at** | **Time** |  | [readonly] |
+| **created_at** | **Time** |  | [optional][readonly] |
+| **updated_at** | **Time** |  | [optional][readonly] |
 
 ## Example
 

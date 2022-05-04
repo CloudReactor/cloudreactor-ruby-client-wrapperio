@@ -11,7 +11,7 @@ plugins {
 val GROUP = "io.cloudreactor"
 val ARTIFACT = "tasksymphony"
 val PACKAGE = GROUP + "." + ARTIFACT
-val VERSION = "0.1.2"
+val VERSION = "0.3.0.0"
 
 group = PACKAGE
 version = VERSION
@@ -62,40 +62,9 @@ tasks.register<Copy>("copyLib") {
 
 tasks.register("build") {
     dependsOn(tasks.named("copyLib"))
-    finalizedBy(tasks.named("patchLib"))
     finalizedBy(tasks.named("copyWrapperLib"))
     finalizedBy(tasks.named("patchGemfile"))
     finalizedBy(tasks.named("patchGemspec"))
-}
-
-tasks.register("patchLib") {
-    doLast {
-        val inputPath = file("./lib_patch/configuration_patch.rb").toPath()
-        val outputFileWriter = FileWriter("lib/cloudreactor_api_client.rb",
-            true // append
-        )
-
-        outputFileWriter.write("\n# Patches below\n")
-        outputFileWriter.write(Files.readString(inputPath))
-        outputFileWriter.close()
-    }
-    dependsOn(tasks.named("copyLib"))
-}
-
-tasks.register<Copy>("patchGemspec") {
-    from(File("build/generate-resources/main")) {
-        include("*.gemspec")
-    }
-    destinationDir = File(".")
-    filter {
-       if (it.contains("s.files")) {
-           "  s.files = Dir[\"{lib}/**/*.rb\", \"LICENSE.txt\", \"*.md\"]"
-       } else {
-           it
-       }
-    }
-    filteringCharset = "UTF-8"
-    dependsOn(tasks.named("openApiGenerate"))
 }
 
 tasks.register<Copy>("patchGemfile") {
@@ -115,6 +84,24 @@ tasks.register<Copy>("patchGemfile") {
     }
     filteringCharset = "UTF-8"
     dependsOn(tasks.named("openApiGenerate"))
+    mustRunAfter(tasks.named("copyWrapperLib"))
+}
+
+tasks.register<Copy>("patchGemspec") {
+    from(File("build/generate-resources/main")) {
+        include("*.gemspec")
+    }
+    destinationDir = File(".")
+    filter {
+       if (it.contains("s.files")) {
+           "  s.files = Dir[\"{lib}/**/*.rb\", \"LICENSE.txt\", \"*.md\"]"
+       } else {
+           it
+       }
+    }
+    filteringCharset = "UTF-8"
+    dependsOn(tasks.named("openApiGenerate"))
+    mustRunAfter(tasks.named("patchGemfile"))
 }
 
 tasks.register<Copy>("copyWrapperLib") {

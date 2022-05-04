@@ -4,10 +4,10 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **type** | **String** |  | [readonly] |
-| **service_arn** | **String** |  | [readonly] |
-| **service_infrastructure_website_url** | **String** |  | [readonly] |
-| **service_arn_updated_at** | **Time** |  | [readonly] |
+| **type** | **String** |  | [optional][readonly] |
+| **service_arn** | **String** |  | [optional][readonly] |
+| **service_infrastructure_website_url** | **String** |  | [optional][readonly] |
+| **service_arn_updated_at** | **Time** |  | [optional][readonly] |
 
 ## Example
 

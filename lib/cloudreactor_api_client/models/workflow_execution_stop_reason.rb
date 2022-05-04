@@ -14,12 +14,9 @@ require 'date'
 require 'time'
 
 module CloudReactorAPIClient
-  class TimeoutBehaviorEnum
-    ALWAYS_FAIL_WORKFLOW = "always_fail_workflow".freeze
-    ALWAYS_TIMEOUT_WORKFLOW = "always_timeout_workflow".freeze
-    FAIL_WORKFLOW_IF_UNHANDLED = "fail_workflow_if_unhandled".freeze
-    TIMEOUT_WORKFLOW_IF_UNHANDLED = "timeout_workflow_if_unhandled".freeze
-    IGNORE = "ignore".freeze
+  class WorkflowExecutionStopReason
+    MANUAL = "MANUAL".freeze
+    MAX_EXECUTION_TIME_EXCEEDED = "MAX_EXECUTION_TIME_EXCEEDED".freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string
@@ -32,8 +29,8 @@ module CloudReactorAPIClient
     # @param [String] The enum value in the form of the string
     # @return [String] The enum value
     def build_from_hash(value)
-      constantValues = TimeoutBehaviorEnum.constants.select { |c| TimeoutBehaviorEnum::const_get(c) == value }
-      raise "Invalid ENUM value #{value} for class #TimeoutBehaviorEnum" if constantValues.empty?
+      constantValues = WorkflowExecutionStopReason.constants.select { |c| WorkflowExecutionStopReason::const_get(c) == value }
+      raise "Invalid ENUM value #{value} for class #WorkflowExecutionStopReason" if constantValues.empty?
       value
     end
   end

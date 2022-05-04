@@ -5,25 +5,25 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **task_definition_arn** | **String** |  | [optional] |
-| **task_definition_infrastructure_website_url** | **String** |  | [readonly] |
+| **task_definition_infrastructure_website_url** | **String** |  | [optional][readonly] |
 | **allocated_cpu_units** | **Integer** |  | [optional] |
 | **allocated_memory_mb** | **Integer** |  | [optional] |
-| **type** | **String** |  | [readonly] |
-| **capabilities** | **Array&lt;String&gt;** |  | [readonly] |
+| **type** | **String** |  | [optional][readonly] |
+| **capabilities** | **Array&lt;String&gt;** |  | [optional][readonly] |
 | **tags** | **Hash&lt;String, String&gt;** |  |  |
 | **default_subnets** | **Array&lt;String&gt;** |  | [optional] |
-| **default_subnet_infrastructure_website_urls** | **Array&lt;String&gt;** |  | [readonly] |
+| **default_subnet_infrastructure_website_urls** | **Array&lt;String&gt;** |  | [optional][readonly] |
 | **default_launch_type** | [**AwsEcsLaunchType**](AwsEcsLaunchType.md) |  | [optional] |
 | **supported_launch_types** | [**Array&lt;AwsEcsLaunchType&gt;**](AwsEcsLaunchType.md) |  | [optional] |
 | **default_cluster_arn** | **String** |  | [optional] |
-| **default_cluster_infrastructure_website_url** | **String** |  | [readonly] |
+| **default_cluster_infrastructure_website_url** | **String** |  | [optional][readonly] |
 | **default_security_groups** | **Array&lt;String&gt;** |  | [optional] |
-| **default_security_group_infrastructure_website_urls** | **Array&lt;String&gt;** |  | [readonly] |
+| **default_security_group_infrastructure_website_urls** | **Array&lt;String&gt;** |  | [optional][readonly] |
 | **default_assign_public_ip** | **Boolean** |  | [optional] |
 | **default_execution_role** | **String** |  | [optional] |
-| **default_execution_role_infrastructure_website_url** | **String** |  | [readonly] |
+| **default_execution_role_infrastructure_website_url** | **String** |  | [optional][readonly] |
 | **default_task_role** | **String** |  | [optional] |
-| **default_task_role_infrastructure_website_url** | **String** |  | [readonly] |
+| **default_task_role_infrastructure_website_url** | **String** |  | [optional][readonly] |
 | **default_platform_version** | **String** |  | [optional] |
 | **main_container_name** | **String** |  | [optional] |
 | **service_options** | [**AwsEcsServiceOptions**](AwsEcsServiceOptions.md) |  | [optional] |

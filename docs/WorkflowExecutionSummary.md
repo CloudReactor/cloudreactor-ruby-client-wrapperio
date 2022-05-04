@@ -4,23 +4,23 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **url** | **String** |  | [readonly] |
-| **uuid** | **String** |  | [readonly] |
-| **dashboard_url** | **String** |  | [readonly] |
+| **url** | **String** |  | [optional][readonly] |
+| **uuid** | **String** |  | [optional][readonly] |
+| **dashboard_url** | **String** |  | [optional][readonly] |
 | **status** | [**WorkflowExecutionStatus**](WorkflowExecutionStatus.md) |  |  |
-| **run_reason** | **Integer** |  | [optional] |
-| **started_at** | **Time** |  | [readonly] |
+| **run_reason** | [**WorkflowExecutionRunReason**](WorkflowExecutionRunReason.md) |  | [optional] |
+| **started_at** | **Time** |  | [optional][readonly] |
 | **finished_at** | **Time** |  | [optional] |
 | **last_heartbeat_at** | **Time** |  | [optional] |
-| **stop_reason** | **Integer** |  | [optional] |
+| **stop_reason** | [**WorkflowExecutionStopReason**](WorkflowExecutionStopReason.md) |  | [optional] |
 | **marked_done_at** | **Time** |  | [optional] |
 | **kill_started_at** | **Time** |  | [optional] |
 | **kill_finished_at** | **Time** |  | [optional] |
 | **kill_error_code** | **Integer** |  | [optional] |
 | **failed_attempts** | **Integer** |  | [optional] |
 | **timed_out_attempts** | **Integer** |  | [optional] |
-| **created_at** | **Time** |  | [readonly] |
-| **updated_at** | **Time** |  | [readonly] |
+| **created_at** | **Time** |  | [optional][readonly] |
+| **updated_at** | **Time** |  | [optional][readonly] |
 
 ## Example
 

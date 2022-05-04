@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **url** | **String** |  | [readonly] |
-| **uuid** | **String** |  | [readonly] |
+| **url** | **String** |  | [optional][readonly] |
+| **uuid** | **String** |  | [optional][readonly] |
 | **description** | **String** |  | [optional] |
 | **from_workflow_task_instance** | [**NameAndUuid**](NameAndUuid.md) |  |  |
 | **to_workflow_task_instance** | [**NameAndUuid**](NameAndUuid.md) |  |  |
@@ -17,8 +17,8 @@
 | **ui_color** | **String** |  | [optional] |
 | **ui_line_style** | **String** |  | [optional] |
 | **ui_scale** | **Float** |  | [optional] |
-| **created_at** | **Time** |  | [readonly] |
-| **updated_at** | **Time** |  | [readonly] |
+| **created_at** | **Time** |  | [optional][readonly] |
+| **updated_at** | **Time** |  | [optional][readonly] |
 
 ## Example
 

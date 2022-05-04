@@ -13,7 +13,7 @@
 | **max_concurrency** | **Integer** |  | [optional] |
 | **max_age_seconds** | **Integer** |  | [optional] |
 | **default_max_retries** | **Integer** |  | [optional] |
-| **latest_workflow_execution** | [**WorkflowExecutionSummary**](WorkflowExecutionSummary.md) |  | [optional] |
+| **latest_workflow_execution** | [**WorkflowExecutionSummary**](WorkflowExecutionSummary.md) |  | [optional][readonly] |
 | **created_by_user** | **String** | Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only. | [optional][readonly] |
 | **created_by_group** | [**Group**](Group.md) |  | [optional][readonly] |
 | **run_environment** | [**NameAndUuid**](NameAndUuid.md) |  | [optional] |

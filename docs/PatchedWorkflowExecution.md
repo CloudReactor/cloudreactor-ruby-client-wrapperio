@@ -9,12 +9,12 @@
 | **dashboard_url** | **String** |  | [optional][readonly] |
 | **workflow** | [**NameAndUuid**](NameAndUuid.md) |  | [optional] |
 | **status** | [**WorkflowExecutionStatus**](WorkflowExecutionStatus.md) |  | [optional] |
-| **run_reason** | **Integer** |  | [optional] |
+| **run_reason** | [**WorkflowExecutionRunReason**](WorkflowExecutionRunReason.md) |  | [optional] |
 | **started_at** | **Time** |  | [optional][readonly] |
 | **started_by** | **String** | Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only. | [optional][readonly] |
 | **finished_at** | **Time** |  | [optional] |
 | **last_heartbeat_at** | **Time** |  | [optional] |
-| **stop_reason** | **Integer** |  | [optional] |
+| **stop_reason** | [**WorkflowExecutionStopReason**](WorkflowExecutionStopReason.md) |  | [optional] |
 | **marked_done_at** | **Time** |  | [optional] |
 | **marked_done_by** | **String** | Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only. | [optional][readonly] |
 | **kill_started_at** | **Time** |  | [optional] |

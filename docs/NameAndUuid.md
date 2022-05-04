@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **uuid** | **String** |  | [optional] |
-| **url** | **String** |  | [readonly] |
+| **url** | **String** |  | [optional][readonly] |
 | **name** | **String** |  | [optional] |
 
 ## Example

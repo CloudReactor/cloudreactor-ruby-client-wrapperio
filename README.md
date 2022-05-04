@@ -39,7 +39,7 @@ status of `CloudReactorAPIClient::TaskExecutionStatus::MANUALLY_STARTED`:
 
 ```ruby
 config = CloudReactorAPIClient::Configuration.new
-config.api_key['tokenAuth'] = 'YOUR API KEY'
+config.access_token = 'YOUR API KEY'
 api_client = CloudReactorAPIClient::ApiClient.new(config)
 
 task = CloudReactorAPIClient::NameAndUuid.new
