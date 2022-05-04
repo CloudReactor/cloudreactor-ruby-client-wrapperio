@@ -1,7 +1,7 @@
 require 'dotenv'
 require 'spec_helper'
 
-describe 'Task Execution Integration' do
+describe 'Task Execution Integration', :integration do
   before do
     Dotenv.load('.env.test.local')
   end
