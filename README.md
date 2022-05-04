@@ -1,8 +1,8 @@
 # CloudReactor Ruby API client and Wrapper I/O
 
-![Gem](https://img.shields.io/gem/v/cloudreactor_api_client)
+[![Gem](https://img.shields.io/gem/v/cloudreactor_api_client)](https://rubygems.org/gems/cloudreactor_api_client)
 ![Ruby CI](https://github.com/CloudReactor/cloudreactor-ruby-client-wrapperio/workflows/Ruby%20CI/badge.svg?branch=master)
-![GitHub](https://img.shields.io/github/license/CloudReactor/cloudreactor-ruby-client-wrapperio)
+[![GitHub](https://img.shields.io/github/license/CloudReactor/cloudreactor-ruby-client-wrapperio)](https://opensource.org/licenses/BSD-2-Clause)
 ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/CloudReactor/cloudreactor-ruby-client-wrapperio)
 
 ## Overview
