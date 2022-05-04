@@ -10,7 +10,8 @@
 This Ruby gem consists of 2 parts:
 
 1) The CloudReactor API client allows ruby applications to programmatically
-   create, monitor, and manage Tasks and Workflows in CloudReactor. Most
+   create, monitor, and manage Tasks and Workflows in
+   [CloudReactor](https://cloudreactor.io/). Most
    notably, you can start and stop Tasks and Workflows by creating Task
    Executions and Workflow Executions.
 
